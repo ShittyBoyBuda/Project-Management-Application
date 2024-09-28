@@ -5,11 +5,18 @@ services:
       context: ./project-management-api 
       dockerfile: Dockerfile
     ports:
-      - "3000:3000" 
+      - "3000:3000"
+    networks:
+      - my-network
 
   client:
     build:
       context: ./client 
       dockerfile: Dockerfile
     ports:
-      - "5173:5173" 
+      - "5173:5173"
+    networks:
+      - my-network
+
+networks:
+  my-network:

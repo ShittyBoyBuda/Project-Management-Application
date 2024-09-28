@@ -10,4 +10,5 @@ COPY . .
 
 EXPOSE 5173
 
-CMD ["npm", "start"] # Замените на вашу команду, если нужно
+CMD ["npm", "run", "dev", "--", "--host"]
+

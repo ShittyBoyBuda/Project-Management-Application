@@ -8,6 +8,9 @@ RUN npm install
 
 COPY . .
 
+RUN npx prisma generate
+
 EXPOSE 3000
 
-CMD ["npx", "nodemon", "src/index.ts"]
+CMD ["npx", "nodemon", "--exec", "ts-node", "src/index.ts"]
+
