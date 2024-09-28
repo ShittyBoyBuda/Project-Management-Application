@@ -1,0 +1,15 @@
+version: '3'
+services:
+  server:
+    build:
+      context: ./project-management-api 
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" 
+
+  client:
+    build:
+      context: ./client 
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173" 
